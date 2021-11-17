@@ -104,8 +104,8 @@ async function run() {
             const name = req.body.name
             const email = req.body.email
             const pic = req.files.image
-            const decodedImage = pic.data.toString('base64')
-            const imageBuffer = Buffer.from(decodedImage, 'base64')
+            const encodedImage = pic.data.toString('base64')
+            const imageBuffer = Buffer.from(encodedImage, 'base64')
             const doctor = {
                 name,
                 email,
